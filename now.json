@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "subatomic.rocks",
+    "alias": "subatomic.rocks",
+    "builds": [
+        { "src": "./dist/**", "use": "@now/static" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "dist/$1" }
+    ]
+}

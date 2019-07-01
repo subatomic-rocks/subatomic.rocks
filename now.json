@@ -6,8 +6,8 @@
         { "src": "./dist/**", "use": "@now/static" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "dist/$1" },
-      { "src": "/sobre", "dest": "dist/" },
-      { "src": "/contato", "dest": "dist/" }
+      { "src": "/(.*)", "dest": "public/$1" },
+      { "src": "/sobre", "dest": "public/index.html" },
+      { "src": "/contato", "dest": "public/index.html" }
     ]
 }

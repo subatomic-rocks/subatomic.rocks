@@ -7,5 +7,7 @@
     ],
     "routes": [
       { "src": "/(.*)", "dest": "dist/$1" }
+      { "src": "/sobre", "dest": "dist/" }
+      { "src": "/contato", "dest": "dist/" }
     ]
 }

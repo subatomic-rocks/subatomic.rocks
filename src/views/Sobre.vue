@@ -1,13 +1,13 @@
 <template>
-  <website-page :background="background" :dark-scheme="true">
+  <website-page :background="background" :dark-scheme="true" :background-opacity="0.3">
     <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2">
           <div class="grid-row grid-align-mid grid-mt-h">
-            <h1>Desenvolvendo o futuro. Pixel por pixel.</h1>
+            <h1>Sua ideia. Nosso código.</h1>
           </div>
           <div class="grid-row grid-align-top">
-            <h2>Somos uma empresa 100% digital, focada em entregar as melhores experiências web aos nossos clientes e seus usuários.</h2>
+            <h2>Desenvolvemos seu projeto com uma stack de tecnologia totalmente personalizada para atender suas necessidades.</h2>
           </div>
         </div>
       </div>
@@ -17,10 +17,10 @@
 
 <script>
 export default {
-  name: 'home',
+  name: 'sobre',
   data () {
     return {
-      background: require('../assets/home-bg.jpg')
+      background: require('../assets/sobre-bg.jpg')
     }
   }
 }

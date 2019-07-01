@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <navigation :color="$color" />
-    <website-main :style="{ color: $color }">
-      <router-view/>
-    </website-main>
+    <website-main />
   </div>
 </template>
 
@@ -21,7 +19,7 @@ export default {
       return this.darkColorScheme ? '#ffffff' : '#212239'
     }
   },
-  mounted () {
+  created () {
     events.$on('dark-color-scheme', enabled => { this.darkColorScheme = enabled })
   }
 }

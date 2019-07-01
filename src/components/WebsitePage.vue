@@ -1,7 +1,9 @@
 <template>
-  <div class="website-page" :style="{ backgroundColor: backgroundColor }">
-    <div class="website-page-background" :style="$styles"></div>
-    <slot />
+  <div class="website-page" :style="{ color: $color, backgroundColor: backgroundColor }">
+    <div class="website-page-inner">
+      <div class="website-page-background" :style="$styles"></div>
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -19,6 +21,9 @@ export default {
     darkScheme: { type: Boolean },
   },
   computed: {
+    $color () {
+      return this.darkScheme ? '#ffffff' : '#212239'
+    },
     $styles () {
       let styles = {}
 
@@ -37,9 +42,7 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => {
-      events.$emit('dark-color-scheme', this.darkScheme)
-    }, 1)
+    events.$emit('dark-color-scheme', this.darkScheme)
   }
 }
 </script>

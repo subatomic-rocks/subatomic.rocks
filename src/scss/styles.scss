@@ -10,6 +10,8 @@
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #000;
 }
 
 // Reset paddings & margins
@@ -34,7 +36,7 @@ nav {
 
   &, path {
     will-change: color, fill;
-    transition: color 0.35s ease, fill 0.35s ease;
+    transition: color $page-transition-time ease, fill $page-transition-time ease;
   }
 
   a {
@@ -57,23 +59,53 @@ nav {
   min-height: 100vh;
 
   .website-page {
-    position: relative;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     z-index: 1;
 
-    &>.website-page-background {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
-      z-index: -1;
+    will-change: transform;
+    transition: transform ($page-transition-time * 2.2) ease-in, opacity 0.7s ease;
+    transform: translate(0, 0);
 
-      background-position: center;
-      background-size: cover;
+    &.changing {
+      transform: translate(-100%, 0);
+      opacity: 0.7;
+    }
+    &.slide-leave-active { transition-duration: 0s; }
+    &.slide-enter-active {
+      transition: transform $page-transition-time ease;
+    }
+    &.slide-enter {
+      transform: translate(100%, 0);
+    }
+    &.slide-enter-to {
+      transform: translate(0, 0);
+      box-shadow: 0px 0px 48px rgba(0, 0, 0, 1);
     }
 
-    min-height: 100vh;
-    padding-top: $grid-height;
+    &>.website-page-inner {
+      position: relative;
+      z-index: 1;
+      
+      height: 100vh;
+      padding-top: $grid-height;
+      overflow-y: auto;
+
+      &>.website-page-background {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: -1;
+
+        background-position: center;
+        background-size: cover;
+      }
+    }
 
     // Grid
     .grid-row {

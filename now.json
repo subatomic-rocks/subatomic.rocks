@@ -2,12 +2,11 @@
     "version": 2,
     "name": "subatomic-rocks",
     "alias": "subatomic.rocks",
-    "builds": [
-        { "src": "./dist/**", "use": "@now/static" }
-    ],
+    "builds": [{ "src": "package.json", "use": "@now/static-build" }],
     "routes": [
-      { "src": "/(.*)", "dest": "public/$1" },
-      { "src": "/sobre", "dest": "public/index.html" },
-      { "src": "/contato", "dest": "public/index.html" }
+      { "src": "^/js/(.*)", "dest": "/js/$1" },
+      { "src": "^/css/(.*)", "dest": "/css/$1" },
+      { "src": "^/img/(.*)", "dest": "/img/$1" },
+      { "src": ".*", "dest": "/index.html" }
     ]
 }

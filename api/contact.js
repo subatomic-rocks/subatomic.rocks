@@ -5,7 +5,7 @@ sendgridMail.setApiKey(process.env.sendgrid_key)
 module.exports = (req, res) => {
   let { name, email, phone, message } = req.body
 
-  let email = {
+  let emailMessage = {
     to: 'oi@subatomic.rocks',
     from: 'oi@subatomic.rocks',
     subject: `Contact: ${name}`,

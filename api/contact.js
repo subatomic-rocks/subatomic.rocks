@@ -3,6 +3,8 @@ const sendgridMail = require('@sendgrid/mail')
 sendgridMail.setApiKey(process.env.sendgrid_key)
 
 module.exports = (req, res) => {
+  console.log('Contact', req.body)
+
   let { name, email, phone, message } = req.body
 
   let emailMessage = {
@@ -17,6 +19,6 @@ module.exports = (req, res) => {
 
   let response = sendgridMail.send(email)
 
-  console.log('Contact', response, req.body, email)
+  console.log('Contact', response)
   res.send('Sent.')
 }

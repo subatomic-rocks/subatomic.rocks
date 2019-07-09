@@ -1,7 +1,7 @@
 <template>
   <nav class="d-flex align-items-center" :style="{ color: $color }">
     <div class="container">
-      <div class="row d-flex align-items-center">
+      <div class="row d-block d-md-flex text-center align-items-center">
         <div class="col-md-3 nav-logo">
           <router-link to="/">
             <logo :fill="$color" />

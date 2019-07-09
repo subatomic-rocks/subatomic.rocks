@@ -62,7 +62,7 @@ export default {
     sendMessage (e) {
       e.preventDefault()
 
-      console.log(this.form)
+      console.log('Form post:', this.form, e)
 
       return false
     }

@@ -72,7 +72,7 @@ export default {
         phone: this.form.phone,
         message: this.form.message,
       }).then(response => {
-        this.$router.push({ path: '/contact/thank-you' })
+        this.$router.push({ path: '/contato/thank-you' })
       })
 
       return false
@@ -86,6 +86,8 @@ form {
   position: relative;
   display: block;
   width: 100%;
+  
+  transition: opacity 0.5s ease;
 
   &.processing > .row {
     opacity: 0.35;

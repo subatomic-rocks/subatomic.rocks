@@ -16,7 +16,7 @@
             </h2>
           </div>
           <div class="grid-row grid-align-top">
-            <form :class="{ active: isProcessing }" action="/api/contact" method="post" @submit="sendMessage">
+            <form :class="{ processing: isProcessing }" action="/api/contact" method="post" @submit="sendMessage">
               <spinner fill="#212239" :active="isProcessing" />
               <div class="row">
                 <div class="col-12">
@@ -57,7 +57,7 @@ export default {
   data () {
     return {
       background: require('../assets/contato-bg.jpg'),
-      isProcessing: true,
+      isProcessing: false,
       form: {},
     }
   },
@@ -88,7 +88,7 @@ form {
   width: 100%;
 
   &.processing > .row {
-    opacity: 0.65;
+    opacity: 0.35;
   }
 }
 </style>

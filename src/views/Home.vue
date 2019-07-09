@@ -1,5 +1,5 @@
 <template>
-  <website-page :background="background" :dark-scheme="true" background-offset="150px">
+  <website-page :background="background" :dark-scheme="true" background-offset="150px" :background-opacity="bgOpacity">
     <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2 mt-0 mt-xl-4">
@@ -19,11 +19,18 @@
 </template>
 
 <script>
+import viewport from 'responsive-toolkit'
+
 export default {
   name: 'home',
   data () {
     return {
       background: require('../assets/home-bg.jpg')
+    }
+  },
+  computed: {
+    bgOpacity () {
+      return viewport.is('>=sm') ? 1.0 : 0.3
     }
   }
 }

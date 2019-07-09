@@ -14,6 +14,7 @@
     "core-js": "^2.6.5",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
+    "responsive-toolkit": "^2.6.3",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },

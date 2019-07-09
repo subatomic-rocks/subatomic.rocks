@@ -1,6 +1,6 @@
 <template>
   <website-page :background="background" :dark-scheme="false" background-position="center top">
-    <div class="container">
+    <div class="container pb-5 pb-sm-0">
       <div class="row">
         <div class="col-md-6 offset-md-3 col-xl-8 offset-xl-2">
           <div class="grid-row grid-align-mid grid-mt-h mb-5 mb-xl-0">

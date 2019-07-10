@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import viewport from '../viewport'
+import Viewport from '../viewport'
 
 export default {
   name: 'home',
@@ -29,8 +29,11 @@ export default {
     }
   },
   computed: {
-    bgOpacity () {
-      return viewport.fits('sm') ? 1.0 : 0.3
+    bgOpacity: {
+      cache: false,
+      get () {
+        return (Viewport.fits('sm') && Viewport.fitsHeight(720)) ? 1.0 : 0.3
+      }
     }
   }
 }

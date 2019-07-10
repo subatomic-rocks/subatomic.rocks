@@ -8,8 +8,26 @@
           </router-link>
         </div>
         <div class="col-md-9 nav-main" :class="{ active: menuActive }">
+          <router-link to="/" class="d-block d-md-none">Home</router-link>
           <router-link to="/sobre">O que fazemos</router-link>
           <router-link to="/contato">Fale Conosco</router-link>
+          <div class="d-flex justify-content-around d-md-none social-links">
+            <div>
+              <a href="https://www.facebook.com/subatomic.rocks/" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/subatomic.rocks/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/company/12628757/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="d-block d-md-none nav-toggle">
           <button @click="toggleMenu">

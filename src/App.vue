@@ -7,6 +7,7 @@
 
 <script>
 import events from './events'
+import Viewport from './viewport'
 
 export default {
   data () {
@@ -21,6 +22,9 @@ export default {
   },
   created () {
     events.$on('dark-color-scheme', enabled => { this.darkColorScheme = enabled })
+    
+    // Hooks window resizes to app update
+    Viewport.hook(e => { this.$forceUpdate() })
   }
 }
 </script>

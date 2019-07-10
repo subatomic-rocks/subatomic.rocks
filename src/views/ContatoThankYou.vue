@@ -16,6 +16,27 @@
               Enquanto isso, acompanhe nossas redes sociais:
             </h2>
           </div>
+          <div class="row grid-row grid-size-0 grid-mt-h">
+            <div class="col-12">
+              <div class="d-flex justify-content-center social-links">
+                <div>
+                  <a href="https://www.facebook.com/subatomic.rocks/" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/subatomic.rocks/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.linkedin.com/company/12628757/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

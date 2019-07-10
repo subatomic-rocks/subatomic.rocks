@@ -32,9 +32,9 @@
                     <i class="fab fa-whatsapp"></i>
                     <input required type="tel" v-model="form.phone" name="phone" placeholder="+55 (19) 98335-9825" />
                   </div>
-                  <div class="form-input">
+                  <div class="form-input form-input-textarea">
                     <i class="far fa-edit"></i>
-                    <textarea required v-model="form.message" name="message" placeholder="Sua Mensagem"></textarea>
+                    <textarea rows="5" required v-model="form.message" name="message" placeholder="Sua Mensagem"></textarea>
                   </div>
                   <button type="submit" class="form-button">
                     Enviar

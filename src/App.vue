@@ -2,8 +2,6 @@
   <div id="app">
     <navigation :color="$color" />
     <website-main />
-
-    <link rel="icon" type="image/png" :href="appIcon" />
   </div>
 </template>
 
@@ -14,8 +12,7 @@ import Viewport from './viewport'
 export default {
   data () {
     return {
-      darkColorScheme: false,
-      appIcon: require('./assets/logo.png')
+      darkColorScheme: false
     }
   },
   computed: {

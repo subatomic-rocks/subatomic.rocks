@@ -19,6 +19,11 @@
             <form :class="{ processing: isProcessing }" action="/api/contact" method="post" @submit="sendMessage">
               <spinner fill="#212239" :active="isProcessing" />
               <div class="row">
+                <div class="col-12 mb-5">
+                  <social-links />
+                </div>
+              </div>
+              <div class="row">
                 <div class="col-12">
                   <div class="form-input">
                     <i class="far fa-id-card"></i>

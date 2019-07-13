@@ -3,9 +3,19 @@
     "name": "subatomic-rocks",
     "alias": "subatomic.rocks",
     "builds": [
-        { "src": "./dist/**", "use": "@now/static" }
+      { "src": "public/favicon.png", "use": "@now/static" },
+      { "src": "api/**.js", "use": "@now/node" },
+      { "src": "package.json", "use": "@now/static-build" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "dist/$1" }
-    ]
+      { "src": "/favicon.png", "dest": "/public/favicon.png" },
+      { "src": "^/api/(.*)", "dest": "/api/$1.js"},
+      { "src": "^/css/(.*)", "dest": "/css/$1" },
+      { "src": "^/img/(.*)", "dest": "/img/$1" },
+      { "src": "^/js/(.*)", "dest": "/js/$1" },
+      { "src": ".*", "dest": "/index.html" }
+    ],
+    "env": {
+        "sendgrid_key": "@subatomic-sendgrid-key"
+    }
 }

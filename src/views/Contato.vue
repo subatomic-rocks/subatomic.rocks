@@ -35,7 +35,7 @@
                   </div>
                   <div class="form-input">
                     <i class="fab fa-whatsapp"></i>
-                    <input required type="tel" v-model="form.phone" name="phone" placeholder="+55 (19) 98335-9825" />
+                    <input required type="tel" v-model="form.phone" name="phone" placeholder="+55 (19) 2222-0091" />
                   </div>
                   <div class="form-input form-input-textarea">
                     <i class="far fa-edit"></i>

@@ -16,7 +16,7 @@
       </a>
     </div>
     <div>
-      <a href="https://wa.me/5519983359825" target="_blank" rel="nofollow">
+      <a href="https://wa.me/551922220091" target="_blank" rel="nofollow">
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
